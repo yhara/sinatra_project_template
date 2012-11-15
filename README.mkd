@@ -12,11 +12,11 @@ Combination of:
 Usage
 =====
 
-  $ git clone https://github.com/yhara/sinatra_project_template myproject
-  $ cd myproject
-  $ bundle install
-  $ rackup -p 4000
-  $ open http://localhost:4000/
+    $ git clone https://github.com/yhara/sinatra_project_template myproject
+    $ cd myproject
+    $ bundle install
+    $ rackup -p 4000
+    $ open http://localhost:4000/
 
 Start development
 -----------------
