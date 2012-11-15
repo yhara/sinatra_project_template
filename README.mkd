@@ -10,7 +10,7 @@ Combination of:
 * sinatra-reloader for development
 
 Usage
-=====
+-----
 
     $ git clone https://github.com/yhara/sinatra_project_template myproject
     $ cd myproject
@@ -18,22 +18,26 @@ Usage
     $ rackup -p 4000
     $ open http://localhost:4000/
 
-Start development
------------------
+### Start development
 
 * Edit app.rb for application code
 * Edit views/index.slim for view (or add your own \*.slim)
 * Edit views/layout.slim for layouts
 * Edit views/screen.sass for stylesheet
 
+Todo
+----
+
+* activerecord? 
+
 License
-=======
+-------
 
 MIT
 
 public/favicon.ico : [famfamfam Silk icons](http://www.famfamfam.com/lab/icons/silk/) (brick.png)
 
 Contact
-=======
+-------
 
 https://github.com/yhara/sinatra_project_template
