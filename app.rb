@@ -2,8 +2,13 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require 'slim'
 require 'sass'
+require "sinatra/activerecord"
+
+#class Book < ActiveRecord::Base
+#end
 
 class MyApp < Sinatra::Base
+  register Sinatra::ActiveRecordExtension
   configure(:development){ register Sinatra::Reloader }
 
   get '/' do

@@ -8,6 +8,7 @@ Combination of:
 * slim for template
 * sass for CSS
 * sinatra-reloader for development
+* sinatra-activerecord for models
 
 Usage
 -----
@@ -25,10 +26,26 @@ Usage
 * Edit views/layout.slim for layouts
 * Edit views/screen.sass for stylesheet
 
-Todo
-----
+### How to setup database
 
-* activerecord? 
+    $ bundle exec rake db:create_migration NAME=create_users
+    # Edit db/migrate/*.rb
+    $ bundle exec rake db:migrate
+
+Migration file example:
+
+```ruby
+class CreateUsers < ActiveRecord::Migration
+  def change
+    create_table :users do |t|
+      t.string :name
+    end
+  end
+end
+```
+
+If you want to use a RDBMS other than SQLite3, edit Gemfile and
+config/database.yml.
 
 License
 -------
