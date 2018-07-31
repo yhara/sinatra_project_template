@@ -1,4 +1,4 @@
 require "bundler/setup"
-require "./app.rb"
+require "./app/main.rb"
 
 run MyApp

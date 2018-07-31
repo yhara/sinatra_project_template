@@ -1,0 +1,11 @@
+h1 Book
+
+div
+  ' Title:
+  = @book.title
+
+div
+  a href="/books/#{@book.id}/edit" Edit
+  '  |
+  a href="/books" Back
+

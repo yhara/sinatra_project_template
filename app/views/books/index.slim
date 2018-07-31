@@ -1,0 +1,10 @@
+h1 Books
+
+ul
+  - @books.each do |book|
+    li
+      a href="/books/#{book.id}"
+        = book.title
+
+div
+  a href="/books/new" New Book

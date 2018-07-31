@@ -1,0 +1,14 @@
+- if @book.errors.any?
+  .errors
+    = @book.errors.full_messages.join(' / ')
+
+form action=(@book.persisted? ? "/books/#{@book.id}" : "/books") method="POST"
+  - if @book.persisted?
+    input type="hidden" name="_method" value="PUT"
+
+  .field
+    label for="book_title" Title
+    input id="book_title" name="title" type="text" value=(@book.title)
+
+  .actions
+    input type="submit" name="commit" value="Save"
