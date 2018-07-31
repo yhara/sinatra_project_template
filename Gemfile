@@ -10,3 +10,11 @@ gem 'sass'
 # Database 
 gem 'sinatra-activerecord'
 gem 'sqlite3'
+
+group :test do
+  gem 'rspec'
+  gem 'rack-test'
+  gem 'database_rewinder'
+  gem 'capybara'
+  gem 'simplecov'
+end
