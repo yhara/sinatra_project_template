@@ -76,11 +76,14 @@ describe 'books controller', type: :feature do
   end
 
   describe 'destroy' do
-    it 'should destroy a book' do
-      TODO
+    it 'should destroy a book', js: true do
       book = Book.create!(@valid_posted)
-      visit "/#{book.id}"
-      expect(page).to have_content("TITLE")
+      visit "/books/#{book.id}"
+      page.accept_confirm 'Are you sure?' do
+        click_link "Delete"
+      end
+      expect(page.current_path).to eq("/books")
+      expect(Book.find_by(id: book.id)).to be_nil
     end
   end
 end

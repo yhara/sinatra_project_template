@@ -16,5 +16,8 @@ group :test do
   gem 'rack-test'
   gem 'database_rewinder'
   gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
   gem 'simplecov'
+  gem 'puma'
 end
