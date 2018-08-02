@@ -14,7 +14,7 @@ end
 # Setup capybara
 require 'capybara/rspec'
 class MyApp
-  module IntegrationTest
+  module SystemTest
     def app
       @app ||= MyApp
     end

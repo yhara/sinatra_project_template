@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'books controller', type: :feature do
-  include MyApp::IntegrationTest
+  include MyApp::SystemTest
 
   before :all do
     @valid_params = {
