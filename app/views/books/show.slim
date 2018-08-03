@@ -1,0 +1,20 @@
+h1 Book
+
+div
+  ' Title:
+  = @book.title
+
+div
+  a href="/books/#{@book.id}/edit" Edit
+  '  |
+  form action="/books/#{@book.id}" method="POST" id="delete_book" style="display: inline"
+    input type="hidden" name="_method" value="DELETE"
+    a href="#" onclick="confirmAndDelete('#delete_book')" Delete
+  '  |
+  a href="/books" Back
+
+javascript:
+  function confirmAndDelete(formSelector) {
+    if (!confirm('Are you sure?')) return;
+    $(formSelector).submit();
+  }
