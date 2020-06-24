@@ -47,7 +47,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     public_suffix (3.0.2)
     puma (3.12.6)
-    rack (2.0.8)
+    rack (2.2.3)
     rack-protection (2.0.3)
       rack
     rack-test (1.0.0)
